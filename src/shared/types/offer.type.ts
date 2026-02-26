@@ -1,4 +1,4 @@
-import {User} from './user.type.js';
+import { User } from './user.type.js';
 
 export type City = {
     name: string;
@@ -14,14 +14,14 @@ export enum Convenience {
     Washer = 'Washer',
     Towels = 'Towels',
     Fridge = 'Fridge',
-};
+}
 
 export enum OfferType {
     Apartment = 'Apartment',
     House = 'House',
     Room = 'Room',
     Hotel = 'Hotel',
-};
+}
 
 export type Offer = {
     title: string;
