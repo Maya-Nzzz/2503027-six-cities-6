@@ -1,6 +1,6 @@
 import { FileReader } from './file-reader.interface.js';
 import { readFileSync } from 'node:fs';
-import { Convenience, Offer, OfferType, UserType } from '../types/index.js';
+import { ConvenienceType, Offer, OfferType, UserType } from '../types/index.js';
 
 export class TSVFileReader implements FileReader {
   private rawData = '';
@@ -65,7 +65,7 @@ export class TSVFileReader implements FileReader {
         roomsCount: Number.parseInt(roomsCount, 10),
         guestsCount: Number.parseInt(guestsCount, 10),
         price: Number.parseInt(price, 10),
-        conveniences: conveniences.split(',').map((convenience) => Convenience[convenience as keyof typeof Convenience]),
+        conveniences: conveniences.split(',').map((convenience) => ConvenienceType[convenience as keyof typeof ConvenienceType]),
         author: {
           name: authorName,
           email: authorEmail,
