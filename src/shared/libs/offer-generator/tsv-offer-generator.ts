@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-import '..node_modules/dayjs/locale/ru';
+import 'dayjs/locale/ru.js';
 import { OfferGenerator } from './offer-generator.interface.js';
 import { MockServerData, OfferType, User } from '../../types/index.js';
 import { generateRandomValue, getRandomItem, getRandomItems } from '../../helpers/index.js';
