@@ -1,0 +1,93 @@
+{
+  "api": {
+    "titles": [
+      "Уютная студия в латинском квартале",
+      "Лофт в индустриальном стиле Кёльна",
+      "Домик у канала в Амстердаме",
+      "Современные апартаменты в Брюсселе",
+      "Комната в историческом центре Гамбурга",
+      "Элитный пентхаус в Дюссельдорфе",
+      "Семейный дом с садом в пригороде",
+      "Стильный отель в центре Парижа",
+      "Апартаменты с видом на порт",
+      "Бюджетная студия в Брюсселе"
+    ],
+    "descriptions": [
+      "Прекрасная светлая студия с видом на старый город. Полностью укомплектована для длительного проживания.",
+      "Просторное помещение с высокими потолками и дизайнерской мебелью в самом сердце арт-района города.",
+      "Традиционный узкий дом с крутой лестницей и великолепным видом на воду. Очень романтичное место.",
+      "Минималистичный дизайн и панорамные окна. Находится в шаговой доступности от Гран-Плас.",
+      "Тихая комната в коммунальной квартире с дружелюбными соседями и отличным интернетом.",
+      "Роскошное жилье с террасой на крыше и персональным консьержем. Идеально для бизнес-поездок.",
+      "Большой зеленый двор, зона для барбекю и детская площадка. Все для идеального отдыха семьей.",
+      "Бутик-отель с уникальным оформлением каждого номера и завтраками от шеф-повара.",
+      "Наблюдайте за кораблями прямо из окна своей гостиной. Очень светлое и просторное жилье.",
+      "Простой, но чистый вариант для тех, кто хочет сэкономить и жить недалеко от метро."
+    ],
+    "cities": [
+      "Paris",
+      "Cologne",
+      "Amsterdam",
+      "Brussels",
+      "Hamburg",
+      "Dusseldorf"
+    ],
+    "previewImages": [
+      "https://images.example.com/p-01.jpg",
+      "https://images.example.com/p-02.jpg",
+      "https://images.example.com/p-03.jpg",
+      "https://images.example.com/p-04.jpg",
+      "https://images.example.com/p-05.jpg",
+      "https://images.example.com/p-06.jpg",
+      "https://images.example.com/p-07.jpg",
+      "https://images.example.com/p-08.jpg",
+      "https://images.example.com/p-09.jpg",
+      "https://images.example.com/p-10.jpg"
+    ],
+    "photos": [
+      "https://img.com/1.jpg",
+      "https://img.com/2.jpg",
+      "https://img.com/3.jpg",
+      "https://img.com/4.jpg",
+      "https://img.com/5.jpg",
+      "https://img.com/6.jpg",
+      "https://img.com/7.jpg",
+      "https://img.com/8.jpg",
+      "https://img.com/9.jpg",
+      "https://img.com/10.jpg",
+      "https://img.com/11.jpg",
+      "https://img.com/12.jpg"
+    ],
+    "types": [
+      "apartment",
+      "hotel",
+      "house",
+      "room"
+    ],
+    "features": [
+      "Breakfast",
+      "Air conditioning",
+      "Laptop friendly workspace",
+      "Baby seat",
+      "Washer",
+      "Towels",
+      "Fridge"
+    ],
+    "users": [
+      {
+        "name": "Татьяна",
+        "email": "Tanya@example.com",
+        "avatar": "img/avatar-tanya.jpg",
+        "password": "123456",
+        "type": "ordinary"
+      },
+      {
+        "name": "Марина",
+        "email": "marina@example.com",
+        "avatar": "img/avatar-marina.png",
+        "password": "pro_password",
+        "type": "pro"
+      }
+    ]
+  }
+}

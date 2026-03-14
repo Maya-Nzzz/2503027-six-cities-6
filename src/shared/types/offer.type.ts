@@ -6,7 +6,16 @@ export type City = {
     longitude: number;
 }
 
-export enum Convenience {
+export enum CityType {
+  Paris = 'Paris',
+  Cologne = 'Cologne',
+  Brussels = 'Brussels',
+  Amsterdam = 'Amsterdam',
+  Hamburg = 'Hamburg',
+  Dusseldorf = 'Dusseldorf',
+}
+
+export enum ConvenienceType {
     Breakfast = 'Breakfast',
     AirConditioning = 'Air conditioning',
     LaptopFriendlyWorkspace = 'Laptop friendly workspace',
@@ -17,10 +26,10 @@ export enum Convenience {
 }
 
 export enum OfferType {
-    Apartment = 'Apartment',
-    House = 'House',
-    Room = 'Room',
-    Hotel = 'Hotel',
+    Apartment = 'apartment',
+    House = 'house',
+    Room = 'room',
+    Hotel = 'hotel',
 }
 
 export type Offer = {
@@ -37,7 +46,7 @@ export type Offer = {
     roomsCount: number;
     guestsCount: number;
     price: number;
-    conveniences: Convenience[];
+    conveniences: ConvenienceType[];
     author: User;
     commentsCount: number;
     latitude: number;
