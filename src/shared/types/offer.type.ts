@@ -1,11 +1,5 @@
 import { User } from './user.type.js';
 
-export type City = {
-  name: keyof typeof CityType;
-  latitude: number;
-  longitude: number;
-}
-
 export enum CityType {
   Paris = 'Paris',
   Cologne = 'Cologne',
@@ -13,6 +7,12 @@ export enum CityType {
   Amsterdam = 'Amsterdam',
   Hamburg = 'Hamburg',
   Dusseldorf = 'Dusseldorf',
+}
+
+export type City = {
+  name: keyof typeof CityType;
+  latitude: number;
+  longitude: number;
 }
 
 export enum ConvenienceType {
