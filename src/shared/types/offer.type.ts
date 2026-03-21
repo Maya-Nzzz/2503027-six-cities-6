@@ -1,9 +1,9 @@
 import { User } from './user.type.js';
 
 export type City = {
-    name: string;
-    latitude: number;
-    longitude: number;
+  name: keyof typeof CityType;
+  latitude: number;
+  longitude: number;
 }
 
 export enum CityType {
@@ -47,7 +47,7 @@ export type Offer = {
     guestsCount: number;
     price: number;
     conveniences: ConvenienceType[];
-    author: User;
+    user: User;
     commentsCount: number;
     latitude: number;
     longitude: number;
