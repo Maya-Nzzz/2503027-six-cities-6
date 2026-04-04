@@ -1,5 +1,5 @@
 import { defaultClasses, getModelForClass, modelOptions, prop, Ref } from '@typegoose/typegoose';
-import { CityType, OfferType, ConvenienceType } from '../../types/index.js';
+import { CityName, OfferType, ConvenienceType } from '../../types/index.js';
 import { UserEntity } from '../user/index.js';
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-declaration-merging
@@ -23,10 +23,10 @@ export class OfferEntity extends defaultClasses.TimeStamps {
 
   @prop({
     type: () => String,
-    enum: CityType,
+    enum: CityName,
     required: true
   })
-  public city!: CityType;
+  public city!: CityName;
 
   @prop({ required: true })
   public previewPath!: string;
@@ -34,7 +34,6 @@ export class OfferEntity extends defaultClasses.TimeStamps {
   @prop({
     type: () => [String],
     required: true,
-    // Валидатор для проверки "Всегда 6 фотографий"
     validate: [(val: string[]) => val.length === 6, 'Photos list must contain exactly 6 images']
   })
   public images!: string[];
@@ -45,7 +44,7 @@ export class OfferEntity extends defaultClasses.TimeStamps {
   @prop({ required: true })
   public isFavorite!: boolean;
 
-  @prop({ required: true, min: 1, max: 5 })
+  @prop({ required: true, min: 0, max: 5 })
   public rating!: number;
 
   @prop({

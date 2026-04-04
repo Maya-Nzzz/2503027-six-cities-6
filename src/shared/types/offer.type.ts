@@ -1,6 +1,6 @@
 import { User } from './user.type.js';
 
-export enum CityType {
+export enum CityName {
   Paris = 'Paris',
   Cologne = 'Cologne',
   Brussels = 'Brussels',
@@ -9,8 +9,17 @@ export enum CityType {
   Dusseldorf = 'Dusseldorf',
 }
 
+export const CITIES: Record<CityName, { latitude: number; longitude: number }> = {
+  [CityName.Paris]: { latitude: 48.85661, longitude: 2.351499 },
+  [CityName.Cologne]: { latitude: 50.938361, longitude: 6.959974 },
+  [CityName.Brussels]: { latitude: 50.846557, longitude: 4.351697 },
+  [CityName.Amsterdam]: { latitude: 52.370216, longitude: 4.895168 },
+  [CityName.Hamburg]: { latitude: 53.550341, longitude: 10.000654 },
+  [CityName.Dusseldorf]: { latitude: 51.225402, longitude: 6.776314 },
+};
+
 export type City = {
-  name: keyof typeof CityType;
+  name: keyof typeof CityName;
   latitude: number;
   longitude: number;
 }
@@ -36,7 +45,7 @@ export type Offer = {
     title: string;
     description: string;
     postDate: Date;
-    city: City;
+    city: CityName;
     previewPath: string;
     images: string[];
     isPremium: boolean;

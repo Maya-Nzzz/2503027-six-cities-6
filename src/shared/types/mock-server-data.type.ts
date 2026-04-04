@@ -1,10 +1,10 @@
-import { City, ConvenienceType, OfferType } from './offer.type.js';
+import { CityName, ConvenienceType, OfferType } from './offer.type.js';
 import { User } from './user.type.js';
 
 export type MockServerData = {
     titles: string[];
     descriptions: string[];
-    cities: City[];
+    cities: CityName[];
     previewImages: string[];
     photos: string[];
     types: OfferType[];

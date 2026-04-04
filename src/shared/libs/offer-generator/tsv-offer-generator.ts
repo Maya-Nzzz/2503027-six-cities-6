@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import 'dayjs/locale/ru.js';
 import { OfferGenerator } from './offer-generator.interface.js';
-import { MockServerData, OfferType, User } from '../../types/index.js';
+import { CityName, MockServerData, OfferType, User } from '../../types/index.js';
 import { generateRandomValue, getRandomItem, getRandomItems } from '../../helpers/index.js';
 
 dayjs.locale('ru');
@@ -13,7 +13,7 @@ const FIRST_WEEK_DAY = 1;
 const LAST_WEEK_DAY = 7;
 
 export class TSVOfferGenerator implements OfferGenerator {
-  constructor(private readonly mockData: MockServerData) {}
+  constructor(private readonly mockData: MockServerData) { }
 
   public generate(): string {
     const title = getRandomItem<string>(this.mockData.titles);
@@ -21,9 +21,9 @@ export class TSVOfferGenerator implements OfferGenerator {
     const createdDate = dayjs()
       .subtract(generateRandomValue(FIRST_WEEK_DAY, LAST_WEEK_DAY), 'day')
       .toISOString();
-    const city = getRandomItem<string>(this.mockData.cities);
+    const city = getRandomItem<CityName>(this.mockData.cities);
     const previewPath = getRandomItem<string>(this.mockData.previewImages);
-    const photos = getRandomItems<string>(this.mockData.photos);
+    const photos = getRandomItems<string>(this.mockData.photos, 6);
     const isPremium = Math.random() < 0.5;
     const isFavorite = Math.random() < 0.5;
     const rating = generateRandomValue(1, 5, 1);
@@ -55,7 +55,7 @@ export class TSVOfferGenerator implements OfferGenerator {
       price,
       conveniences.join(';'),
       commentsCount,
-      `${author.name};${author.email};${author.avatarPath};${author.password};${author.type}`,
+      `${author.name};${author.email};${author.avatarPath ?? 'default-avatar.jpg'};${author.type}`,
       `${coordinates[0]};${coordinates[1]}`
     ].join('\t');
   }
