@@ -77,14 +77,14 @@
       {
         "name": "Татьяна",
         "email": "Tanya@example.com",
-        "avatar": "img/avatar-tanya.jpg",
+        "avatarPath": "img/avatar-tanya.jpg",
         "password": "123456",
         "type": "ordinary"
       },
       {
         "name": "Марина",
         "email": "marina@example.com",
-        "avatar": "img/avatar-marina.png",
+        "avatarPath": "img/avatar-marina.png",
         "password": "pro_password",
         "type": "pro"
       }

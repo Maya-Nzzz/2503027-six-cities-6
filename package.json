@@ -10,12 +10,12 @@
   "main": "main.rest.js",
   "scripts": {
     "start": "npm run build && node ./dist/main.rest.js",
-    "start:dev": "npm run ts ./src/main.rest.ts | pino-pretty --colorize --translateTime SYS:standard",
+    "start:dev": "nodemon",
     "build": "npm run clean && npm run compile",
     "lint": "eslint src/ --ext .ts",
     "compile": "tsc -p tsconfig.json",
     "clean": "rimraf dist",
-    "ts": "node --loader ts-node/esm",
+    "ts": "node --loader ts-node/esm --no-warnings",
     "mock:server": "json-server ./mocks/mock-server-data.json --port 3123"
   },
   "type": "module",
