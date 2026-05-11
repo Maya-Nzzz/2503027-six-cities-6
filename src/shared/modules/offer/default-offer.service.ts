@@ -6,14 +6,15 @@ import { DocumentType, types } from '@typegoose/typegoose';
 import { OfferEntity } from './offer.entity.js';
 import { CreateOfferDto } from './dto/create-offer.dto.js';
 import { UpdateOfferDto } from './dto/update-offer.dto.js';
-/* import { CommentEntity } from '../comment/comment.entity.js'; */
+import { CommentEntity } from '../comment/comment.entity.js';
 import { DEFAULT_OFFER_COUNT } from './offer.constant.js';
 
 @injectable()
 export class DefaultOfferService implements OfferService {
   constructor(
     @inject(Component.Logger) private readonly logger: Logger,
-    @inject(Component.OfferModel) private readonly offerModel: types.ModelType<OfferEntity>
+    @inject(Component.OfferModel) private readonly offerModel: types.ModelType<OfferEntity>,
+    @inject(Component.CommentModel) private readonly commentModel: types.ModelType<CommentEntity>
   ) {}
 
   public async create(dto: CreateOfferDto): Promise<DocumentType<OfferEntity>> {
@@ -84,7 +85,7 @@ export class DefaultOfferService implements OfferService {
       .exec();
   }
 
-/*   public async updateRatingAndCommentCount(offerId: string): Promise<void> {
+  public async updateRatingAndCommentCount(offerId: string): Promise<void> {
     const [aggregation] = await this.commentModel.aggregate<{ count: number; avgRating: number }>([
       { $match: { offerId: new this.commentModel.base.Types.ObjectId(offerId) } },
       {
@@ -109,5 +110,5 @@ export class DefaultOfferService implements OfferService {
       commentCount,
       rating,
     });
-  } */
+  }
 }
