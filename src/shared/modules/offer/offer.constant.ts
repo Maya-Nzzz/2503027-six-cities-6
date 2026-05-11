@@ -1,1 +1,2 @@
 export const DEFAULT_OFFER_COUNT = 25;
+export const DEFAULT_FAVORITE_OFFER_COUNT = 5;
