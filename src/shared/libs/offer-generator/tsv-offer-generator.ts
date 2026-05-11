@@ -55,7 +55,7 @@ export class TSVOfferGenerator implements OfferGenerator {
       price,
       conveniences.join(';'),
       commentsCount,
-      `${author.name};${author.email};${author.avatarPath ?? 'default-avatar.jpg'};${author.type}`,
+      `${author.name};${author.email};${author.avatarPath ?? 'default-avatar.png'};${author.type}`,
       `${coordinates[0]};${coordinates[1]}`
     ].join('\t');
   }
