@@ -25,3 +25,17 @@ Content-Type: application/json
 }
 
 ###
+
+## Отправить изображение
+
+POST http://localhost:5000/users/69cfd56756fdcaa5f1398238/avatar HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="avatar"; filename="default-avatar.png"
+Content-Type: image/png
+
+< C:/computer_science_and_engineering/node_js/2503027-six-cities-6/upload/default-avatar.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+##
