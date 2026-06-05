@@ -16,9 +16,4 @@ export class CreateUserDto {
 
   @IsEnum(UserType, { message: CreateUserMessages.userType.invalidFormat })
   public type: UserType;
-
-  @IsOptional()
-  @IsString({ message: CreateUserMessages.avatarPath.invalidFormat })
-  @Matches(/\.(jpg|png)$/, { message: CreateUserMessages.avatarPath.invalidExtension })
-  public avatarPath?: string;
 }
