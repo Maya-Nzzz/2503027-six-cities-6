@@ -4,14 +4,14 @@ import { OfferEntity } from './offer.entity.js';
 import { UpdateOfferDto } from './dto/update-offer.dto.js';
 import { DocumentExists } from '../../types/index.js';
 
-export interface OfferService extends DocumentExists{
+export interface OfferService extends DocumentExists {
   create(dto: CreateOfferDto): Promise<DocumentType<OfferEntity>>;
   findById(offerId: string): Promise<DocumentType<OfferEntity> | null>;
   find(): Promise<DocumentType<OfferEntity>[]>;
   deleteById(offerId: string): Promise<DocumentType<OfferEntity> | null>;
   updateById(offerId: string, dto: UpdateOfferDto): Promise<DocumentType<OfferEntity> | null>;
-  findPremiumByCity(city: string, limit?: number): Promise<DocumentType<OfferEntity>[]>;
-  findFavorite(count: number): Promise<DocumentType<OfferEntity>[]>;
+  getPremiumByCity(city: string, limit?: number): Promise<DocumentType<OfferEntity>[]>;
+  findFavorite(count?: number): Promise<DocumentType<OfferEntity>[]>; // Сделали count необязательным
   addToFavorite(offerId: string): Promise<DocumentType<OfferEntity> | null>;
   removeFromFavorite(offerId: string): Promise<DocumentType<OfferEntity> | null>;
   updateRatingAndCommentCount(offerId: string): Promise<void>;
